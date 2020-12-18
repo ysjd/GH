@@ -3,4 +3,31 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="themecolor">#28B28B</color>
+    <color name="themecolor_select">#36d8aa</color>
+    <color name="black">#000000</color>
+
+    <color name="banner_bg">#66000000</color>
+
+    <color name="font_searchhint">#CFEBE3</color>
+    <color name="font_theme">#333333</color>
+
+    <color name="edittext_circular_bg">#49BD9C</color>
+    <color name="circular_bg">#FAFAFA</color>
+    <color name="search_hint">#CFEBE3</color>
+
+    <color name="line">#D4D4D4</color>
+    <color name="line_mine">#DEDEDE</color>
+
+    <color name="suggest_et_bg">#F0F1F6</color>
+
+    <color name="waitdialog_bg">#99000000</color>
+    <color name="white">#ffffff</color>
+    <color name="suggest_bg">#F0F1F6</color>
+    <color name="suggest_hint">#9A9A9A</color>
+    <color name="transport">#00000000</color>
+
+    <color name="illustration_stroke">#BDDBF2</color>
+    <color name="illustration">#479BE0</color>
 </resources>

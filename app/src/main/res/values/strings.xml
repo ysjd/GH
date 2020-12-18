@@ -1,3 +1,77 @@
 <resources>
-    <string name="app_name">GH</string>
+    <string name="app_name">城市绿心森林公园</string>
+
+    <string name="login">登录</string>
+    <string name="login_type">登录方式</string>
+    <string name="apptitle">城市绿心森林公园</string>
+    <string name="official_app">官方APP</string>
+    <string name="read_protocol">我已阅读并同意</string>
+    <string name="user_protocol">用户协议</string>
+    <string name="secret">隐私政策</string>
+    <string name="free_login">免登陆模式</string>
+
+    <string name="visit_manual">游园手册</string>
+    <string name="traffic_guide">交通指南</string>
+    <string name="visit_carhailing">游览约车</string>
+    <string name="order_in">预约入园</string>
+
+    <string name="scenicspot_recommend">景点推荐</string>
+    <string name="main_scenicspot">主要景点</string>
+    <string name="greenheart_server">绿心服务</string>
+
+    <string name="cancel">取消</string>
+    <string name="more">更多</string>
+
+    <string name="qr_sao">扫一扫</string>
+
+    <string name="home">首页</string>
+    <string name="suggest">投诉建议</string>
+    <string name="mine">我的</string>
+    <string name="person_center">个人中心</string>
+
+    <string name="load_error">页面加载失败</string>
+    <string name="reload">重新加载</string>
+
+    <string name="park_start_time">开园时间:</string>
+
+    <string name="complaint_rb">投诉</string>
+    <string name="suggest_rb">建议</string>
+    <string name="suggest_hint">欢迎提出您的宝贵意见</string>
+    <string name="submit">提交</string>
+
+    <string name="nodata">暂无数据</string>
+    <string name="search_hint">请输入想要搜索的内容</string>
+
+    <string name="plancar">游览约车</string>
+
+    <string name="zxing_result_notice">已扫描到以下内容</string>
+    <string name="zxing_result">扫描结果</string>
+
+    <string name="no_function">敬请期待</string>
+    <string name="checknet">请检查网络连接</string>
+
+    <string name="login_notice">此功能需要登录后才能使用，现在登录吗？</string>
+
+    <string name="suggest_success">提交成功</string>
+    <string name="suggest_failed">提交失败</string>
+    <string name="suggest_limit">24小时之内只能提交一次，请确保提交信息真实性，请勿随意提交</string>
+    <string name="suggest_notice">近期已提交多次，请勿重复提交</string>
+
+    <string name="update">发现新版本，是否立即更新</string>
+    <string name="updatenow">立即更新</string>
+
+    <string name="suggest_phone">投诉电话：</string>
+    <string name="logout">退出登录</string>
+    <string name="scan_tip">请将扫码框对准二维码\r\n请将扫码框对准二维码</string>
+    <string name="scan">扫码</string>
+
+    <string name="map">地图</string>
+    <string name="map_searchhint">输入目的地关键词</string>
+    <string name="navigation">导航</string>
+    <string name="introduce">介绍</string>
+    <string name="no_search">无相关搜索结果</string>
+    <string name="hint_dialog">收起</string>
+
+    <string name="car_total">车位总数</string>
+    <string name="car_free">剩余车位</string>
 </resources>

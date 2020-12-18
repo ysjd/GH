@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
-
+apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
 android {
@@ -9,17 +9,58 @@ android {
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.cslx.greenheart"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    signingConfigs {
+        release {
+            //签名文件路径
+            storeFile file('E:/appkey/greenheart.jks')
+            //签名密码
+            storePassword "jydgreenheart"
+            //别名
+            keyAlias "greenheart"
+            //别名密码
+            keyPassword "jydgreenheart"
+        }
+        debug {
+            storeFile file('E:/appkey/greenheart.jks')
+            keyPassword 'jydgreenheart'
+            keyAlias 'greenheart'
+            storePassword 'jydgreenheart'
+        }
+    }
+
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            minifyEnabled true // 混淆
+            zipAlignEnabled true // Zipalign优化
+            shrinkResources true  // 移除无用的resource文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
+        debug {
+            minifyEnabled true // 混淆
+            zipAlignEnabled true // Zipalign优化
+            shrinkResources true  // 移除无用的resource文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
     }
 }
 
@@ -32,4 +73,39 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+    //okhttp  要想支持5.0一下的需要用okhttp的fix分支3.12.x版本
+    implementation 'com.squareup.okhttp3:okhttp:3.12.2'
+    implementation 'com.squareup.okio:okio:2.2.2'
+    //Glide图片加载
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    //今日头条适配方案
+    implementation 'me.jessyan:autosize:1.2.1'
+    //沉浸式菜单
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+    // fragment快速实现（可选）
+    implementation 'com.gyf.immersionbar:immersionbar-components:3.0.0'
+    //圆形进度条
+    implementation 'com.wang.avi:library:2.1.3'
+    //butterknife
+    implementation 'com.jakewharton:butterknife:10.2.2'
+    kapt 'com.jakewharton:butterknife-compiler:10.2.2'
+    //微信登录
+    api 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+    //轮播图
+    implementation 'com.youth.banner:banner:2.1.0'
+    //华为扫码
+    implementation 'com.huawei.hms:scanplus:1.2.2.300'
+    //搜索界面自动换行gridview
+    implementation 'com.google.android:flexbox:2.0.1'
+
+    //百度地图
+    implementation files('libs/BaiduLBS_Android.jar')
+
+    implementation(name: 'alipaySdk-15.6.4', ext: 'aar')
+    //支付宝登录
+    implementation files('libs/tbs_sdk_thirdapp_v4.3.0.jar')
 }
